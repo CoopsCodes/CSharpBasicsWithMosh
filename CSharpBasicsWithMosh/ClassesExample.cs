@@ -28,5 +28,9 @@ namespace CSharpBasicsWithMosh
  *          - Sleep()
  * -------------------
  * 
- * Objects are an instance of a Class,
+ * Objects are an instance of a Class.
+ * 
+ * Static modifier used on a Class is used to define that only a single instance of that class is represented in the memory.
+ * i.e. invoking an object of a class multiple times stores that invokation in a memory location every time, but if a Static
+ * modifier is applied to the class it is always in the in memory location.
 */
