@@ -1,19 +1,20 @@
 ﻿using System;
-
 namespace CSharpBasicsWithMosh
 {
     public class ClassesExample
     {
-        public string ReturnString()
+        public string Name;
+
+        public string TestString()
         {
-            return "I am a string called from within the ClassesExample class from the ReturnString method";
+            return "Oh hey, my name is " + Name;
         }
     }
 }
 
-/* Classes are the building blocks of Object Orientated programming, 
+/* Classes are types that we create Objects from, they are building blocks of Object Orientated programming, 
  * that combine the related variables(fields) with Functions(methods).
- * 
+ * -------------------
  * Class    - Person
  * 
  * Fields   - Name: String
@@ -25,4 +26,7 @@ namespace CSharpBasicsWithMosh
  *          - Talk()
  *          - Eat()
  *          - Sleep()
-*/ 
+ * -------------------
+ * 
+ * Objects are an instance of a Class,
+*/
