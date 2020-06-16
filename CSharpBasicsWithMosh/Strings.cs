@@ -33,6 +33,13 @@ namespace CSharpBasicsWithMosh
             Console.WriteLine(SS.Substring(0, 6)); // output => "String"
             // replaces the first string param with the second.
             Console.WriteLine(SS.Replace("C#", "C++")); // output => "Strings in C++"
+
+            // Join
+            // Used to concat and format, i.e can be used to format a list of names in a string array.
+            string[] names = new string[3] { "Cooper", "Andy", "Gwenny" };
+            string formattedNames = String.Join(", ", names);
+            // this will concat them all the strings together and join them with ', '
+            Console.WriteLine(formattedNames); // output => "Cooper, Andy, Gwenny"
         }
     }
 }
