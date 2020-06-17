@@ -1,6 +1,15 @@
 ﻿using System;
 namespace CSharpBasicsWithMosh
 {
+    // Enum used for the Switch Statement
+    public enum Season
+    {
+        Spring,
+        Summer,
+        Autumn,
+        Winter
+    }
+
     public class ConditionalStatements
     {
         public void IfStatement()
@@ -42,8 +51,35 @@ namespace CSharpBasicsWithMosh
 
             // Can be rewitten as a Conditional Operator
             // Yes it is almost identical to a Ternary Operator in Javascript
-            float conditionalPrice = (isGoldCustomer) ? 19.95f : 29.95f; 
+            float conditionalPrice = (isGoldCustomer) ? 19.95f : 29.95f;
+
+            Console.WriteLine("Price: " + price);
+            Console.WriteLine("Conditional Price" + conditionalPrice);
         }
 
+        public void SwitchStatement()
+        {
+            var season = Season.Autumn;
+
+            switch (season)
+            {
+                case Season.Autumn:
+                case Season.Spring:
+                    Console.WriteLine("This switch will run for both Autumn and Spring");
+                    break;
+
+                case Season.Summer:
+                    Console.WriteLine("It's Summer");
+                    break;
+
+                case Season.Winter:
+                    Console.WriteLine("It's Winter");
+                    break;
+
+                default:
+                    Console.WriteLine("Incorrect Input, please try again.");
+                    break;
+            }
+        }
     }
 }
