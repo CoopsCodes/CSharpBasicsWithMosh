@@ -52,6 +52,21 @@ namespace CSharpBasicsWithMosh
 
                 i++;
             }
+
+            // Another Example
+            Console.WriteLine("Please Enter Your Name: ");
+            string input = Console.ReadLine();
+
+            while (true) 
+            {
+                if (!string.IsNullOrWhiteSpace(input)) // checking if input is NOT null or whitespace
+                {
+                    Console.WriteLine("@Echo: " + input);
+                    continue; // Continue rolls the iteration back to the start without breaking out of it
+                }
+
+                break; // Break will END the while loop.
+            }
         }
     }
 }
