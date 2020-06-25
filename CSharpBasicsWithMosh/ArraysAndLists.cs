@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace CSharpBasicsWithMosh
 {
     public class ArraysAndLists
@@ -33,6 +35,7 @@ namespace CSharpBasicsWithMosh
             jaggard[2] = new int[4];
         }
 
+        // Arrays are a Fixed size collection of objects, i.e numbers, strings
         public void FunWithArrays()
         {
             // var nums = new[] { 2, 4, 6, 8, 10, 1, 3, 5, 7, 9 }; // An alternative to declaring an array using var.
@@ -69,6 +72,39 @@ namespace CSharpBasicsWithMosh
             // Reverse()
             // reverses the array... duh
             Array.Sort(nums); // output => 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+        }
+
+        // Lists are a Dynamic collection of objects, unlike Arrays they dont need to be defined.
+        public void FunWithLists()
+        {
+            // document declaration
+            List<int> number = new List<int>();
+            // var declaration
+            var varList = new List<int>();
+            // declaration with list attached
+            List<int> knownList = new List<int>() { 1, 2, 3, 4, 5 };
+            // To add to a list
+            knownList.Add(6); // Will add 6 to the end of the List
+            // to add a range to the end of a List
+            knownList.AddRange(new int[] { 6, 7, 8 });
+            // IndexOf gives the value at the index location
+            knownList.IndexOf(1); // output => 2
+            // Count is the List equivelent of Length, provides the total number of objects in the List
+            int total = knownList.Count;
+            Console.WriteLine("Count: " + total);
+            // Remove removes the first occurance from the List that matches the value.
+            knownList.Remove(1); // outcome => 2, 3, 4, 5
+            // to remove all occurances from a list.
+            for (var i = 0; i > knownList.Count; i++)
+            {
+                if(knownList[i] == 1)
+                {
+                    knownList.Remove(knownList[i]);
+                }
+            }
+            // to clear the whole list
+            knownList.Clear(); // output => 0
+
         }
     }
 }
