@@ -2,7 +2,7 @@
 
 namespace CSharpBasicsWithMosh
 {
-    public enum Season
+    public enum Seasons
     {
         Spring = 1,
         Summer = 2,
@@ -15,20 +15,20 @@ namespace CSharpBasicsWithMosh
         public static void TestEnum()
         {
             // Grabbing the enum value
-            var grabEnum = Season.Winter; // Assign the enum
+            var grabEnum = Seasons.Winter; // Assign the enum
             // Use 'Casting' to convert the enum to an int
             Console.WriteLine((int)grabEnum); // output => 4
 
             // Recalling an enum by number
             int enumNumber = 3;
             // Cast the enum and pass in the number location required
-            Console.WriteLine((Season)enumNumber); // outcome => "Autumn"
+            Console.WriteLine((Seasons)enumNumber); // outcome => "Autumn"
 
             // Parse (changing data type) to an enum
             string convertSeason = "Spring";
             // convertedEnum is (casting) the Enum.Parse method and grabbing the typeof Season(ie and enum)
             // and passing in the string to convert.
-            var convertedEnum = (Season) Enum.Parse(typeof (Season), convertSeason);
+            var convertedEnum = (Seasons) Enum.Parse(typeof (Seasons), convertSeason);
             Console.WriteLine(convertedEnum);
         }
     }
